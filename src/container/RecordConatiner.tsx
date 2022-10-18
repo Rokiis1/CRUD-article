@@ -23,7 +23,7 @@ const RecordConatiner = <T extends Record>({
   }, [activeRecord, setError]);
 
   return (
-    <div className="mutations">
+    <div>
       {error && <RecordError error={error} />}
       {activeRecord.id ? (
         <RecordEdit<T>

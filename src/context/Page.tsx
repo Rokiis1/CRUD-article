@@ -10,16 +10,16 @@ type ContextType = {
   setPage: (page: Page) => void;
 };
 
-const Context = createContext<ContextType>({
-  page: Page.Articles,
-  setPage: (page) => console.warn("no page provider"),
-});
-
-export const usePage = () => useContext(Context);
-
 type PageStoreProps = {
   children: React.ReactNode;
 };
+
+const Context = createContext<ContextType>({
+  page: Page.Articles,
+  setPage: () => console.warn("no page provider"),
+});
+
+export const usePage = () => useContext(Context);
 
 export const PageStore: React.FC<PageStoreProps> = ({ children }) => {
   const [page, setPage] = useState(Page.Articles);

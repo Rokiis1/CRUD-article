@@ -21,10 +21,15 @@ const RecordForm = <T extends Record>({
   }, [setFormState, activeRecord, success]);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="flex text-black">
+      <form className="flex flex-col justify-center" onSubmit={handleSubmit}>
         <FormFields formState={formState} handleChange={handleChange} />
-        <input type="submit" />
+        <button
+          className=" mt-5 bg-blue-600 hover:bg-blue-900 text-white"
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -7,9 +7,9 @@ type Props = FormFieldsProps<Article>;
 const ArticleFormFields: React.FC<Props> = ({ formState, handleChange }) => {
   const authorsFetch = useFetch<Author>("authors");
   return (
-    <div>
-      <div>
-        <label>Title</label>
+    <div className="flex flex-col gap-3 w-max ">
+      <div className="flex flex-col">
+        <label className="text-white">Title</label>
         <input
           type="text"
           name="title"
@@ -17,8 +17,8 @@ const ArticleFormFields: React.FC<Props> = ({ formState, handleChange }) => {
           onChange={handleChange}
         />
       </div>
-      <div>
-        <label>Text</label>
+      <div className="flex flex-col">
+        <label className="text-white">Text</label>
         <textarea
           name="text"
           value={formState.text}
@@ -26,8 +26,8 @@ const ArticleFormFields: React.FC<Props> = ({ formState, handleChange }) => {
           rows={5}
         />
       </div>
-      <div>
-        <label>Author</label>
+      <div className="flex flex-col">
+        <label className="text-white">Author</label>
         <select
           name="author"
           value={formState.author ? formState.author.id : ""}

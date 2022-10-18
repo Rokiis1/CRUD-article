@@ -10,7 +10,7 @@ export const RecordError: React.FC<Props> = ({ error }) => {
     ?.validation as ValidationError[];
 
   return (
-    <div className="error">
+    <div>
       <div>
         <b>Message:</b> {error.message}
       </div>

@@ -15,10 +15,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header>
-      <nav>
-        {pageButton(Page.Articles)}
-        {pageButton(Page.Authors)}
+    <header className="bg-gray-800 py-5 text-white">
+      <nav className="px-5 flex gap-5">
+        <div>{pageButton(Page.Articles)}</div>
+        <div>{pageButton(Page.Authors)}</div>
       </nav>
     </header>
   );

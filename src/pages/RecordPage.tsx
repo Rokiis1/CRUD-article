@@ -23,8 +23,8 @@ const RecordPage = <T extends Record>({
     setActiveRecord(emptyRecord);
   };
   return (
-    <div className="page">
-      <div className="content">
+    <section className="text-white flex flex-col md:flex-row">
+      <div className="bg-gray-900 p-5 tracking-wide">
         <RecordList<T>
           ListItem={ListItem}
           records={records}
@@ -34,6 +34,8 @@ const RecordPage = <T extends Record>({
           loading={loading}
           error={error}
         />
+      </div>
+      <div className="bg-gray-800 p-5 w-full">
         <RecordConatiner<T>
           FormFields={FormFields}
           activeRecord={activeRecord}
@@ -41,7 +43,7 @@ const RecordPage = <T extends Record>({
           callback={callback}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

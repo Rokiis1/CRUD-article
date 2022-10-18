@@ -10,10 +10,8 @@ const RecordEdit = <T extends Record>({
   success,
 }: RecordEditProps<T>) => {
   return (
-    <div className="edit">
-      <button className="bt-remove" onClick={() => remove(activeRecord)}>
-        Remove
-      </button>
+    <div>
+      <button onClick={() => remove(activeRecord)}>Remove</button>
       <h2>Edit</h2>
       <RecordForm
         FormFields={FormFields}

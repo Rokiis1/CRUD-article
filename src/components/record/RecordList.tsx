@@ -16,14 +16,17 @@ const RecordList = <T extends Record>({
   const { page } = usePage();
 
   return (
-    <div className="list">
+    <div>
       {error && <RecordError error={error} />}
       <div>
-        <h2>{page}</h2>
-        <button className="bt-new" onClick={() => setActiveRecord(emptyRecord)}>
+        <h2 className="text-4xl text font-bold py-2">{page}</h2>
+        <button
+          className="py-1 px-5 my-3 bg-green-500 hover:bg-green-700"
+          onClick={() => setActiveRecord(emptyRecord)}
+        >
           New
         </button>
-        <ul>
+        <ul className="text-xl flex flex-col gap-5">
           {records.map((record) => (
             <li
               key={record.id}

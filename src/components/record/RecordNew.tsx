@@ -9,8 +9,8 @@ const RecordNew = <T extends Record>({
   success,
 }: RecordNewProps<T>) => {
   return (
-    <div className="new">
-      <h2>New</h2>
+    <div>
+      <h2 className="py-5 text-xl">New</h2>
       <RecordForm
         FormFields={FormFields}
         activeRecord={activeRecord}
